@@ -24,4 +24,4 @@ Route::get('/domande-frequenti', 'StaticPageController@faq')->name('static_page.
 
 // sudenti
 Route::get('/students', 'StudentController@index')->name('student.index');
-Route::get('/students/show/{id}', '©©©@show')->name('student.show');
+Route::get('/students/show/{id}', 'StudentController@show')->name('student.show');
