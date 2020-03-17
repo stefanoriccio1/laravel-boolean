@@ -1,7 +1,7 @@
       @include('layouts.partials._header')
       {{-- header --}}
       <header>
-
+        @yield('header')
       </header>
       {{-- /header --}}
       {{-- main --}}
