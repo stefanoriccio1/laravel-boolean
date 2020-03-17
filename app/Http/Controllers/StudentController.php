@@ -8,8 +8,18 @@ class StudentController extends Controller
 {
     private $students;
 
-    public function _construct()
+    public function __construct()
     {
+      $this->getAllStudents();
+    }
+    public function index(){
+      dd($this->students);
+    }
+    public function show($id){
+
+    }
+
+    private function getAllStudents(){
       $this->students = [
         [
           'img'=> 'https://www.boolean.careers/images/students/biagini.png',
@@ -36,11 +46,5 @@ class StudentController extends Controller
           'descrizione'=> 'Ha scoperto la passione per l\'informatica creando un blog di psicologia, ambito in cui si era specializzata durante gli studi. Il suo cuore però non vuol sentir ragione e Loana cambia carriera e diventa una ricercatissima sviluppatrice web.'
         ]
       ];
-    }
-    public function index(){
-      dd($this->students);
-    }
-    public function show($id){
-
     }
 }
