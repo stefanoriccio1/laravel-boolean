@@ -10888,6 +10888,14 @@ a.text-dark:focus {
   box-sizing: border-box;
 }
 
+h2 {
+  font-size: 23px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
 .navbar {
   height: 90px;
   background-color: blue;
