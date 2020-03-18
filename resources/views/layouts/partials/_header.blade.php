@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,9 +10,9 @@
     <div class="container">
       <nav>
         <ul>
-          <li><a href="{{route('static_page.home') ? 'active' : ' '}}">Home</a></li>
+          <li><a href="{{route('static_page.home')}}">Home</a></li>
           <li><a href="">Corso</a></li>
-          <li><a class="{{(Request::route() == 'student.index')}}" href="{{route('student.index')}}">Dopo Corso</a></li>
+          <li><a class="{{ (Request::route()->getName() == 'student.index') ? 'active' : ' '}}" href="{{route('student.index')}}">Dopo Corso</a></li>
           <li><a href="">Lezione Gratuita</a></li>
           <li><a href="">Canditati Ora</a></li>
         </ul>
