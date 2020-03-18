@@ -10,7 +10,7 @@
     <div class="container">
       <nav>
         <ul>
-          <li><a href="{{route('static_page.home')}}">Home</a></li>
+          <li><a class="{{ (Request::route()->getName() == 'static_page.home') ? 'active' : ' '}}" href="{{route('static_page.home')}}">Home</a></li>
           <li><a href="">Corso</a></li>
           <li><a class="{{ (Request::route()->getName() == 'student.index') ? 'active' : ' '}}" href="{{route('student.index')}}">Dopo Corso</a></li>
           <li><a href="">Lezione Gratuita</a></li>
