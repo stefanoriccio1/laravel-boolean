@@ -12,12 +12,14 @@ class StudentController extends Controller
     {
       $this->getAllStudents();
     }
+
     public function index(){
 
-      $students = $this->students;
+      $students = $this->students; 
 
       return view('students.index', compact('students'));
     }
+
     public function show($id){
 
     }
