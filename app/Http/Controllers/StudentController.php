@@ -15,9 +15,10 @@ class StudentController extends Controller
 
     public function index(){
 
-      $students = $this->students; 
+      //$students = $this->students;
 
-      return view('students.index', compact('students'));
+      //return view('students.index', compact('students'));
+      return view('students.index');
     }
 
     public function show($id){
@@ -53,6 +54,6 @@ class StudentController extends Controller
       // ];
 
       $this->students = config('students.students');
-      dd($this->students);
+      // dd($this->students);
     }
 }
