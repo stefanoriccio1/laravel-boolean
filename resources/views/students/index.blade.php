@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('main')
   @foreach (config('students.students') as $student)
-    {{$student['nome']}}
+    {{-- {{$student['nome']}} --}}
   @endforeach
 @endsection

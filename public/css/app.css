@@ -10894,3 +10894,28 @@ a.text-dark:focus {
   color: white;
 }
 
+.navbar .logo {
+  line-height: 90px;
+  padding: 0 0 0 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  text-align: right;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 0 30px;
+  line-height: 90px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar ul li a.active {
+  color: red;
+}
+

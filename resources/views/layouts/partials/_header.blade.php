@@ -10,6 +10,9 @@
   <body>
     <div class="container">
       <nav class= "navbar">
+        <div class="logo">
+          Boolean
+        </div>
         <ul>
           <li><a class="{{ (Request::route()->getName() == 'static_page.home') ? 'active' : ' '}}" href="{{route('static_page.home')}}">Home</a></li>
           <li><a href="">Corso</a></li>
