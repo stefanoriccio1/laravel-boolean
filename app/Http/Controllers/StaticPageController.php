@@ -15,8 +15,10 @@ class StaticPageController extends Controller
     }
     public function privacy(){
 
+      return view('staticpages.privacy');
+
     }
     public function faq(){
-
+      return view('staticpages.faq');
     }
 }
