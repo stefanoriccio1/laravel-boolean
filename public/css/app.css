@@ -10919,3 +10919,24 @@ a.text-dark:focus {
   color: red;
 }
 
+.nav-footer {
+  height: 100px;
+  background-color: grey;
+}
+
+.nav-footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.nav-footer ul {
+  list-style: none;
+  float: right;
+  text-align: right;
+}
+
+.nav-footer ul a {
+  color: white;
+}
+

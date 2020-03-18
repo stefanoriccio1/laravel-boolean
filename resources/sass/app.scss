@@ -1,6 +1,12 @@
 //
 @import "~bootstrap/scss/bootstrap";
-
+@mixin clearfix{
+  &:after{
+    content:'';
+    display: table;
+    clear: both;
+  }
+}
 *{
  margin: 0;
  padding: 0;
@@ -21,7 +27,7 @@
     text-align: right;
     li{
       display: inline-block;
-      margin: 0 30px
+      margin: 0 30px;
       line-height: 90px;
       a{
         color: white;
@@ -30,6 +36,20 @@
           color: red;
         }
       }
+    }
+  }
+}
+
+.nav-footer{
+  height: 100px;
+  background-color: grey;
+  @include clearfix;
+  ul{
+    list-style: none;
+    float: right;
+    text-align: right;
+    a{
+      color: white;
     }
   }
 }
