@@ -25,6 +25,9 @@ class StudentController extends Controller
       if (!array_key_exists($id, $this->students)) {
         abort('404');
       }
+      $student = $this->students[$id];
+
+      return view('students.show', compact('student'));
     }
 
     private function getAllStudents(){
