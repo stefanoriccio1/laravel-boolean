@@ -29897,7 +29897,20 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 
 $(document).ready(function () {
   $('#filter').change(function () {
-    console.log($(this).val());
+    // console.log($(this).val());
+    $.ajax({
+      'url': window.location.protocol + '//' + window.location.host + '/api/students/genders',
+      'data': {
+        'gender': $(this).val()
+      },
+      'method': 'POST',
+      success: function success(data) {
+        console.log(data);
+      },
+      error: function error() {
+        console.log('error');
+      }
+    });
   });
 });
 
