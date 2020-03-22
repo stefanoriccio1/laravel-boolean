@@ -26,11 +26,22 @@ class StudentController extends Controller
           return response()->json($result);
 
         }
-        // if($data['gender'] == m){
-        //
-        // } else if($data['gender'] == f)){
-        //
-        // }
+        elseif($data['gender'] == 'm'){
+          foreach ($students as $student) {
+            if($student['gender'] == 'm'){
+              $result['response'][]= $student;
+            }
+          }
+          return response()->json($result);
+        }
+        else if($data['gender'] == 'f'){
+          foreach ($students as $student) {
+            if($student['gender'] == 'f'){
+              $result['response'][]= $student;
+            }
+          }
+          return response()->json($result);
+        }
       }
 
     }
