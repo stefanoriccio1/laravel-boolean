@@ -11,17 +11,27 @@ class StudentController extends Controller
     public function gender(Request $request){
 
       $data = $request->all();
+
       $genders = config('students.genders');
+      $students = config('students.students');
 
-      $result >= [];
-      
+      $result = [
+        'error' => '',
+        'response' => []
+      ];
+
       if(in_array($data['gender'], $genders)){
-        if($data['gender'] == m){
-
-        } else if($data['gender'] == f)){
+        if($data['gender'] == 'all'){
+          $result['response'] = $students;
+          return response()->json($result);
 
         }
+        // if($data['gender'] == m){
+        //
+        // } else if($data['gender'] == f)){
+        //
+        // }
       }
-      $students = config('students.students');
+
     }
 }
