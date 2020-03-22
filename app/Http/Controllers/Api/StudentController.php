@@ -34,6 +34,7 @@ class StudentController extends Controller
           }
           return response()->json($result);
         }
+
         // elseif($data['gender'] == 'm'){
         //   foreach ($students as $student) {
         //     if($student['gender'] == 'm'){
@@ -51,6 +52,9 @@ class StudentController extends Controller
         //   return response()->json($result);
         // }
       }
-
+      else{
+        $result['error'] = 'Gender non esistente';
+        return response()->json($result);
+      }
     }
 }
