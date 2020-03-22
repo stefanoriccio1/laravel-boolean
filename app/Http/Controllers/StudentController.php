@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class StudentController extends Controller
 {
     private $students;
+    private $genders;
 
     public function __construct()
     {
@@ -18,7 +19,11 @@ class StudentController extends Controller
       //$students = $this->students;
 
       //return view('students.index', compact('students'));
-      return view('students.index');
+      $data = [
+        'students' => $this->students,
+        'genere' => $this->genders
+      ];
+      return view('students.index', $data);
     }
 
     public function show($id){
@@ -59,6 +64,7 @@ class StudentController extends Controller
       // ];
 
       $this->students = config('students.students');
+      $this->genders = config('students.genere');
       // dd($this->students);
     }
 }
