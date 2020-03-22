@@ -2,9 +2,8 @@
 @section('main')
   <div class="filter">
     <select id="filter" name="filter">
-        <option value="all">ALL</option>
         @foreach ($genders as $gender)
-          <option value="{{$gender}}">{{($gender == 'm') ? 'uomo' : 'donna'}}</option>
+          <option value="{{$gender}}">{{$gender}}</option>
         @endforeach
     </select>
   </div>

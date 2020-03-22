@@ -12,7 +12,7 @@ $(document).ready(function(){
       },
       'method': 'POST',
       success: function(data){
-        console.log(data);
+        console.log(data.response);
       },
       error: function(){
         console.log('error');

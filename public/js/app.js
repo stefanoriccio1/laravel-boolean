@@ -29905,7 +29905,7 @@ $(document).ready(function () {
       },
       'method': 'POST',
       success: function success(data) {
-        console.log(data);
+        console.log(data.response);
       },
       error: function error() {
         console.log('error');
