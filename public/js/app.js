@@ -29905,7 +29905,13 @@ $(document).ready(function () {
       },
       'method': 'POST',
       success: function success(data) {
-        console.log(data.response);
+        console.log(data.error);
+
+        if (data.response.length > 0) {
+          console.log(data.response);
+        } else {
+          console.log('non ci sono studenti');
+        }
       },
       error: function error() {
         console.log('error');
