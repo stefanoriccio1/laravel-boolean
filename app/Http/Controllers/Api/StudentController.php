@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
-    public function gender($gender){
+  //m - f
+    public function gender(Request $request){
 
+      $data = $request->all();
+      dd($data);
     }
 }

@@ -18,6 +18,6 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 // Route::post('/students/genders/{gender}', 'StudentController@gender');
-Route::->namespace('Api')-group(function(){
-  Route::post('/students/genders/{gender}', 'StudentController@gender');
+Route::namespace('Api')->group(function(){
+  Route::post('/students/genders/', 'StudentController@gender');
 });
