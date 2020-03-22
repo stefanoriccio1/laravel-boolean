@@ -3,5 +3,7 @@ require('./bootstrap');
 const $ = require('jquery');
 
 $(document).ready(function(){
-  alert('ciao');
+  $('#filter').change(function(){
+    console.log($(this).val());
+  })
 });

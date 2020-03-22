@@ -29896,7 +29896,9 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
 $(document).ready(function () {
-  alert('ciao');
+  $('#filter').change(function () {
+    console.log($(this).val());
+  });
 });
 
 /***/ }),
