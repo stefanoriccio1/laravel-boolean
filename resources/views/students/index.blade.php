@@ -3,8 +3,8 @@
   <div class="filter">
     <select id="filter" name="filter">
         <option value="all">ALL</option>
-        @foreach (config('students.students') as $key => $student)
-          <option value="{{$student['genere']}}">{{($student['genere'] == 'm') ? 'uomo' : 'donna'}}</option>
+        @foreach ($genders as $gender)
+          <option value="{{$gender}}">{{$gender}}</option>
         @endforeach
     </select>
   </div>
@@ -20,7 +20,7 @@
             </a>
             </h2>
             <h3>
-              Assunt{{($student['genere'] == 'm') ? 'o' : 'a'}} da {{$student['azienda']}} come {{$student['ruolo']}}
+              Assunt{{($student['gender'] == 'm') ? 'o' : 'a'}} da {{$student['azienda']}} come {{$student['ruolo']}}
             </h3>
           </div>
         </div>

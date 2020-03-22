@@ -12,6 +12,8 @@ class StudentController extends Controller
     public function __construct()
     {
       $this->getAllStudents();
+      $this->genders = config('students.genders');
+
     }
 
     public function index(){
@@ -21,7 +23,7 @@ class StudentController extends Controller
       //return view('students.index', compact('students'));
       $data = [
         'students' => $this->students,
-        'genere' => $this->genders
+        'genders' => $this->genders
       ];
       return view('students.index', $data);
     }
