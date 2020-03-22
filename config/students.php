@@ -29,5 +29,5 @@ return[
       'gender' => 'f'
     ]
   ],
-  'genders' => ['m', 'f']
+  'genders' => ['m', 'f', 'all']
 ];
