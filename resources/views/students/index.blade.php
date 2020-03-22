@@ -1,5 +1,13 @@
 @extends('layouts.layout')
 @section('main')
+  <div class="filter">
+    <select id="filter" name="filter">
+        <option value="all">ALL</option>
+        @foreach ($genders as $gender)
+          <option value="{{$gender}}">{{$gender}}</option>
+        @endforeach
+    </select>
+  </div>
   <div class="students">
     @foreach (config('students.students') as $key => $student)
       <div class="student">
