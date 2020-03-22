@@ -4,7 +4,7 @@
     <select id="filter" name="filter">
         <option value="all">ALL</option>
         @foreach ($genders as $gender)
-          <option value="{{$gender}}">{{$gender}}</option>
+          <option value="{{$gender}}">{{($gender == 'm') ? 'uomo' : 'donna'}}</option>
         @endforeach
     </select>
   </div>
